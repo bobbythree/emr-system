@@ -1,26 +1,27 @@
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">EMR</a>
+        <Link className="btn btn-ghost text-xl">EMR</Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href='/'>
+            <Link to='/'>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/all'>
+            <Link to='/all'>
               All Charts
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/admission'>
+            <Link to='/admission'>
               Admission
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
