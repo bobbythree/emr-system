@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Dangme Poopydoops",
+    "img": "",
+    "dob": "07-04-1776",
+    "diagnosis": "Bipolar II",
+    "admitDate": "02-23-2024",
+    "precautions": "SI, HI, AP"
+  },
+  {
+    "id": 2,
+    "name": "Harold Purplecrayon",
+    "img": "",
+    "dob": "12-25-0000",
+    "diagnosis": "NPD",
+    "admitDate": "04-02-2024",
+    "precautions": "EP, AP"
+  },
+  {
+    "id": 3,
+    "name": "Guybrush Threepwood",
+    "img": "",
+    "dob": "10-15-1990",
+    "diagnosis": "Schizophrenia",
+    "admitDate": "11-13-2025",
+    "precautions": "EP, AP"
+  },
+  {
+    "id": 4,
+    "name": "Pearl Harbor",
+    "img": "",
+    "dob": "12-07-1941",
+    "diagnosis": "Schizophrenia",
+    "admitDate": "3-08-2024",
+    "precautions": "HI, AP"
+  },
+  {
+    "id": 5,
+    "name": "Shoobie Shoobie",
+    "img": "",
+    "dob": "10-04-1999",
+    "diagnosis": "GAD",
+    "admitDate": "01-20-2024",
+    "precautions": "SI, EP"
+  },
+  {
+    "id": 6,
+    "name": "Spongebob SquarePants",
+    "img": "",
+    "dob": "3-11-1998",
+    "diagnosis": "ADHD",
+    "admitDate": "11-23-2024",
+    "precautions": "EP, AP"
+  },
+  {
+    "id": 7,
+    "name": "Tootie Fruitty",
+    "img": "",
+    "dob": "02-02-1973",
+    "diagnosis": "Schizophrenia",
+    "admitDate": "12-01-2024",
+    "precautions": "SI, HI, AP"
+  },
+  {
+    "id": 8,
+    "name": "Honey Booboo",
+    "img": "",
+    "dob": "08-19-1968",
+    "diagnosis": "BPD",
+    "admitDate": "3-08-2024",
+    "precautions": "SI, EP"
+  }
+]
