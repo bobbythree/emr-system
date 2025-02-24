@@ -7,9 +7,21 @@ export default function NavBar() {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>All Charts</a></li>
-          <li><a>Admission</a></li>
+          <li>
+            <a href='/'>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href='/all'>
+              All Charts
+            </a>
+          </li>
+          <li>
+            <a href='/admission'>
+              Admission
+            </a>
+          </li>
         </ul>
       </div>
     </div>
