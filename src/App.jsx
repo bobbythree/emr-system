@@ -8,7 +8,7 @@ import {
 import HomePage from './pages/HomePage.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import AllChartsPage from './pages/AllChartsPage.jsx'
-import Admission from './pages/Admission.jsx'
+import AdmissionPage from './pages/AdmissionPage'
 
 
 const router = createBrowserRouter(
@@ -16,7 +16,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path='/all' element={<AllChartsPage />} />
-      <Route path='/admission' element={<Admission />} />
+      <Route path='/admission' element={<AdmissionPage />} />
     </Route>
   )
 );
