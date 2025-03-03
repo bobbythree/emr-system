@@ -1,0 +1,8 @@
+CREATE TABLE test_data (
+  id INTEGER PRIMARY KEY AUTO INCREMENT,
+  name TEXT,
+  dob TEXT,
+  admission_date TEXT,
+  diagnosis TEXT,
+  precautions TEXT
+);
