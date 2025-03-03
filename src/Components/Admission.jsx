@@ -1,5 +1,5 @@
 
-export default function Admission() {
+export default function AdmissionPage() {
   return (
     <fieldset className="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
       <legend className="fieldset-legend">Admission Form</legend>
