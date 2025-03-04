@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import FormInput from '../Components/FormInput.jsx'
 
 export default function AdmissionPage() {
   const [formData, setFormData] = useState({
@@ -17,29 +18,79 @@ export default function AdmissionPage() {
     }))
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+     const response = await fetch('/api/test-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('admission form submitted');
+        setFormData({
+          patientName: '',
+          dob: '',
+          admissionDate: '',
+          diagnosis: '',
+          precautions: '',
+        });
+      } else {
+        console.error('Error submitting admission form', response.statusText);
+      }
+    } catch (error) {
+      console.error('Network Error, error');
+    }
+  }
+
   return (
     <>
-    <div className="text-2xl text-base-200 p-3">Admission Form</div>
+      <div className="text-2xl text-base-200 p-3">Admission Form</div>
 
-    <form id="form">
-      <fieldset id="name" className="fieldset w-xs bg-base-300  border border-base-300 p-4 ml-3 rounded-box">
-        <label className="fieldset-label text-gray-700">Patient Name</label>
-        <input type="text" className="input" placeholder="Enter name" />
-    
-        <label id="dob" className="fieldset-label text-gray-700">DOB</label>
-        <input type="date" className="input" />
-    
-        <label id="admission-date" className="fieldset-label text-gray-700">Admission Date</label>
-        <input type="date" className="input" />
-
-        <label id="diagnosis" className="fieldset-label text-gray-700">Diagnosis</label>
-        <input type="text" className="input" placeholder="Enter Diagnosis" />
-
-        <label id="precautions" className="fieldset-label text-gray-700">Precautions</label>
-        <input type="text" className="input" placeholder="Enter Precautions" />
-
-      </fieldset>
-    </form>
+      <form id="form" onSubmit={handleSubmit}>
+        <fieldset className="fieldset w-xs bg-base-300 border border-base-300 p-4 ml-3 rounded-box">
+          <FormInput
+            id="patientName"
+            label="Patient Name"
+            placeholder="Enter name"
+            value={formData.patientName}
+            onChange={handleChange}
+          />
+          <FormInput
+            id="dob"
+            label="DOB"
+            type="date"
+            value={formData.dob}
+            onChange={handleChange}
+          />
+          <FormInput
+            id="admissionDate"
+            label="Admission Date"
+            type="date"
+            value={formData.admissionDate}
+            onChange={handleChange}
+          />
+          <FormInput
+            id="diagnosis"
+            label="Diagnosis"
+            placeholder="Enter Diagnosis"
+            value={formData.diagnosis}
+            onChange={handleChange}
+          />
+          <FormInput
+            id="precautions"
+            label="Precautions"
+            placeholder="Enter Precautions"
+            value={formData.precautions}
+            onChange={handleChange}
+          />
+          <button type="submit" className="btn btn-primary mt-4">Submit</button>
+        </fieldset>
+      </form>
     </>
   )
 }

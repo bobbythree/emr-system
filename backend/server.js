@@ -13,9 +13,24 @@ app.get('/', (req, res) => {
   res.send('this is the root of the API')
 })
 
+//post request
+const result = [];
 app.post('/api/test-data', (req, res) => {
-  
+  const { patientName, dob, admissionDate, diagnosis } = req.body;
+  if (!patientName || !dob || !admissionDate || !diagnosis) {
+    return res.status(400).json({ error: 'Missing required fields.' });
+  }
+
+  result.push(req.body);
+
+  res.status(201).json({ message: 'Test-data recorded successfully!', data: req.body });
 })
+
+app.get('/api/test-data', (req, res) => {
+  res.json(result);
+})
+
+
 
 app.listen(port, () => {
     console.log(`server running on port: ${port}`)
