@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send('this is the root of the API')
 })
 
+app.post('/api/test-data', (req, res) => {
+  
+})
+
 app.listen(port, () => {
     console.log(`server running on port: ${port}`)
   })
