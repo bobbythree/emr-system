@@ -22,7 +22,7 @@ export default function AdmissionPage() {
     e.preventDefault();
 
     try {
-     const response = await fetch('/api/test-data', {
+     const response = await fetch('http://127.0.0.1:5000/api/test-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export default function AdmissionPage() {
         console.error('Error submitting admission form', response.statusText);
       }
     } catch (error) {
-      console.error('Network Error, error');
+      console.error(`Network Error, ${error}`);
     }
   }
 
