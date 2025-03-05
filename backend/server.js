@@ -30,6 +30,18 @@ app.get('/api/test-data', (req, res) => {
   res.json(result);
 })
 
+app.delete('/api/test-data/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = posts.find((post) => post.id === id);
+  if (!post) {
+    return res
+      .status(404)
+      .json({msg: `Post with id of ${id} not found`})
+  }
+
+  posts = posts.filter((post) => post.id !== id)
+  res.status(200).json(posts);
+});
 
 
 app.listen(port, () => {
