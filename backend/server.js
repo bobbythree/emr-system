@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 //post request
-const result = [];
+let result = [];
 app.post('/api/test-data', (req, res) => {
   const { patientName, dob, admissionDate, diagnosis } = req.body;
   if (!patientName || !dob || !admissionDate || !diagnosis) {
@@ -32,15 +32,15 @@ app.get('/api/test-data', (req, res) => {
 
 app.delete('/api/test-data/:id', (req, res) => {
   const id = parseInt(req.params.id);
-  const post = posts.find((post) => post.id === id);
+  const post = result.find((post) => post.id === id);
   if (!post) {
     return res
       .status(404)
       .json({msg: `Post with id of ${id} not found`})
   }
 
-  posts = posts.filter((post) => post.id !== id)
-  res.status(200).json(posts);
+  result = result.filter((post) => post.id !== id)
+  res.status(200).json(result);
 });
 
 
