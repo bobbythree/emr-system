@@ -14,33 +14,33 @@ app.get('/', (req, res) => {
 })
 
 //post request
-let result = [];
+let data = [];
 app.post('/api/test-data', (req, res) => {
   const { patientName, dob, admissionDate, diagnosis } = req.body;
   if (!patientName || !dob || !admissionDate || !diagnosis) {
     return res.status(400).json({ error: 'Missing required fields.' });
   }
 
-  result.push(req.body);
+  data.push(req.body);
 
   res.status(201).json({ message: 'Test-data recorded successfully!', data: req.body });
 })
 
 app.get('/api/test-data', (req, res) => {
-  res.json(result);
+  res.json(data);
 })
 
 app.delete('/api/test-data/:id', (req, res) => {
   const id = parseInt(req.params.id);
-  const post = result.find((post) => post.id === id);
+  const post = data.find((post) => post.id === id);
   if (!post) {
     return res
       .status(404)
       .json({msg: `Post with id of ${id} not found`})
   }
 
-  result = result.filter((post) => post.id !== id)
-  res.status(200).json(result);
+  data = data.filter((post) => post.id !== id)
+  res.status(200).json(data);
 });
 
 

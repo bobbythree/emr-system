@@ -1,5 +1,6 @@
 export default function FormInput({
-  id, label, type ='text', placeholder = '', value, onChange }) {
+  id, label, type ='text', placeholder = '', value, onChange
+}) {
   return (
     <>
       <label htmlFor={id} className="fieldset-label text-gray-700">{label}</label>
