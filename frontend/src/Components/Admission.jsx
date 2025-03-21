@@ -22,7 +22,7 @@ export default function AdmissionPage() {
     e.preventDefault();
 
     try {
-     const response = await fetch('http://127.0.0.1:5000/api/test-data', {
+     const response = await fetch('http://127.0.0.1:3000/api/thumbnail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,6 +38,7 @@ export default function AdmissionPage() {
           admissionDate: '',
           diagnosis: '',
           precautions: '',
+          allergies: ''
         });
       } else {
         console.error('Error submitting admission form', response.statusText);
@@ -86,6 +87,13 @@ export default function AdmissionPage() {
             label="Precautions"
             placeholder="Enter Precautions"
             value={formData.precautions}
+            onChange={handleChange}
+          />
+          <FormInput
+            id="allergies"
+            label="Allergies"
+            placeholder="Enter allergies"
+            value={formData.allergies}
             onChange={handleChange}
           />
           <button type="submit" className="btn btn-primary mt-4">Submit</button>
