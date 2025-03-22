@@ -20,8 +20,16 @@ export default function AdmissionPage() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     
+    const data = {
+      name: formData.patientName,
+      dob: formData.dob,
+      admissionDate: formData.admissionDate,
+      diagnosis: formData.diagnosis,
+      precautions: formData.precautions,
+      allergies: formData.precautions
+    }
 
     try {
      const response = await fetch('http://127.0.0.1:3000/api/thumbnail', {
@@ -29,7 +37,7 @@ export default function AdmissionPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {
