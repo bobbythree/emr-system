@@ -76,6 +76,28 @@ app.get('/api/thumbnail', (req, res) => {
   }
 });
 
+app.delete('/api/thumbnail', (req, res) => {
+  res.set('content-type', 'application/json');
+  const sql = `DELETE FROM thumbnail_data WHERE patient_id=?`
+  try {
+    db.run(sql, [req.query.id], function(err) {
+      if (err) throw err;
+      if (this.changes === 1) {
+        //one delete done
+        res.status(200);
+        res.send(`{"message": "Patient ${req.query.id} was deleted."}`);
+      } else {
+        //nothing deleted
+        res.status(200);
+        res.send({"message": "No delete operation needed."})
+      }
+    })
+  } catch (err) {
+    console.log(err.message);
+    res.status(468);
+    res.send(`{"code": 468, "status": "${err.message}"}`);
+  }
+});
 
 
 app.listen(port, (err) => {
