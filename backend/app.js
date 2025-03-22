@@ -15,7 +15,13 @@ app.get('/', (req, res) => {
 
 app.post('/api/thumbnail', (req, res) => {
   res.set('content-type', 'application/json');
-  const sql = `INSERT INTO friends(friend_name, friend_reason) VALUES(?, ?)`;
+  const sql = `INSERT INTO thumbnail_data(
+  patient_name,
+  patient_dob,
+  patient_admit_date,
+  patient_diagnosis,
+  patient_precautions,
+  patient_allergies) VALUES(?, ?, ?, ?, ?, ?)`;
   let newId;
   try {
     db.run(sql, [req.body.name, req.body.reason], function(err) {

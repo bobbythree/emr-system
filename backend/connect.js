@@ -12,7 +12,7 @@ function connected(err) {
   console.log('created db or db already exists')
 }
 
-let sql = `CREATE TABLE IF NOT EXISTS thumnail_data(
+let sql = `CREATE TABLE IF NOT EXISTS thumbnail_data(
   patient_id INTEGER PRIMARY KEY,
   patient_name TEXT NOT NULL,
   patient_dob TEXT NOT NULL,
@@ -26,7 +26,7 @@ db.run(sql, [], (err) => {
   if (err) {
     console.log('error creating thumbnail_data table.')
   }
-  console.log(created table.)
+  console.log('created table')
 });
 
 
