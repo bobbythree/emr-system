@@ -45,12 +45,6 @@ app.post('/api/thumbnail', (req, res) => {
   }
 });
 
-
-app.listen(port, (err) => {
-  if (err) console.log('ERROR:', err.message)
-  console.log(`app listening on local host port ${port}`)
-});
-
 app.get('/api/thumbnail', (req, res) => {
   res.set('content-type', 'application/json');
   const sql = 'SELECT * FROM thumbnail_data';
@@ -80,4 +74,11 @@ app.get('/api/thumbnail', (req, res) => {
     res.status(467);
     res.send(`{"code": 467, "status": "${err.message}"}`);
   }
+});
+
+
+
+app.listen(port, (err) => {
+  if (err) console.log('ERROR:', err.message)
+  console.log(`app listening on local host port ${port}`)
 });
