@@ -31,6 +31,11 @@ export default function AdmissionPage() {
       allergies: formData.allergies
     }
 
+    if (!formData.patientName || !formData.dob || !formData.admissionDate || !formData.diagnosis || !formData.precautions || !formData.allergies) {
+      alert('Must fill out all fields');
+      return;
+    }
+
     try {
      const response = await fetch('http://127.0.0.1:3000/api/thumbnail', {
         method: 'POST',
