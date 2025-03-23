@@ -28,7 +28,7 @@ export default function AdmissionPage() {
       admissionDate: formData.admissionDate,
       diagnosis: formData.diagnosis,
       precautions: formData.precautions,
-      allergies: formData.precautions
+      allergies: formData.allergies
     }
 
     try {
