@@ -1,5 +1,5 @@
 ### Electronic Medical Record System  
-This React application is a work in progress which will eventually be a fully functional Electronic Medical Records System (EMR). As of now, users can enter patient data into the 'Admission' page and will be displayed as patient chart thumbnails on the 'All Charts' page. The data is stored in a SQLite database and consumed by the frontend by way of an Express API.  
+This React application is a work in progress which will eventually be a fully functional Electronic Medical Records System (EMR). As of now, users can enter patient data into the 'Admission' page which will be displayed as patient chart thumbnails on the 'All Charts' page. The data is stored in a SQLite database and consumed by the frontend by way of an Express API.  
   
 
 ### to Run:  
