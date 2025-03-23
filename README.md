@@ -1,19 +1,19 @@
-### Electronic Medical Record System  
+## Electronic Medical Record System  
 Fullstack web application work-in-progress which will eventually be a fully functional Electronic Medical Records System (EMR). As of now, users can enter patient data into the 'Admission' page which is displayed on patient chart thumbnails on the 'All Charts' page.   
   
-### Technologies  
-## Frontend:  
+## Technologies  
+### Frontend:  
 - React  
 - TailwindCSS  
 - DaisyUI  
   
-## Backend  
+### Backend  
 - ExpressJS  
 - React Router  
 - SQLite3  
   
   
-### to Run:  
+## to Run:  
 - clone this repo to your local machine  
 - open terminal in project's root directory and type ```npm install```  
 - navigate to backend/ directory and type ```node app.js``` to start backend server  
