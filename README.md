@@ -4,7 +4,8 @@ This React application is a work in progress which will eventually be a fully fu
 
 ### to Run:  
 - clone this repo to your local machine  
-- start backend server by navigating to backend/ directory in terminal and type ```node app.js```  
-- start frontend server by navigating to frontend/ directory in terminal and type ```npm run dev```
+- open terminal in project's root directory and type ```npm install```  
+- start backend server by navigating to backend/ directory and type ```node app.js```  
+- start frontend server by navigating to frontend/ directory and type ```npm run dev```  
 - open 2 browser windows: http://127.0.0.1:3000/api/thumbnail (backend) and http://127.0.0.1:5173 (frontend)
 
