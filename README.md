@@ -1,5 +1,5 @@
 ## Electronic Medical Record System  
-This is a Mock Electronic Medical Records System (EMR) work-in-progress for educational purposes only. As of now, users can enter fake patient data into the 'Admission' page which is displayed on patient chart thumbnails on the 'All Charts' page. This mock EMR contains no actual PHI or patient data.  
+This is a Mock Electronic Medical Records System (EMR) work-in-progress for educational purposes only. This mock EMR contains no actual PHI or patient data.  As of now, users can enter fake patient data into the 'Admission' page which is displayed on patient chart thumbnails on the 'All Charts' page. 
   
 ### Frontend:  
 - React  
