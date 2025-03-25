@@ -1,14 +1,15 @@
 ## Electronic Medical Record System  
-Fullstack web application work-in-progress which will eventually be a fully functional Electronic Medical Records System (EMR). As of now, users can enter patient data into the 'Admission' page which is displayed on patient chart thumbnails on the 'All Charts' page.   
+This is a Mock Electronic Medical Records System (EMR) work-in-progress for educational purposes only. As of now, users can enter fake patient data into the 'Admission' page which is displayed on patient chart thumbnails on the 'All Charts' page. This mock EMR contains no actual PHI or patient data.  
   
 ### Frontend:  
 - React  
+- React Router
 - TailwindCSS  
 - DaisyUI  
   
 ### Backend:  
-- ExpressJS  
-- React Router  
+- Node.js  
+- Express.js  
 - SQLite3  
   
 ## to Run:  
